@@ -16,4 +16,10 @@ Rails.application.routes.draw do
   get "home" =>  "pages#home", as: :home
 
   get "FAQ" =>  "pages#faq", as: :faq
+
+  get "Messages"=> "messages#index", as: :index
+
+  get "Chat"=> "messages#new", as: :new
+
+  resources :messages, only: [:index, :new, :create]
 end

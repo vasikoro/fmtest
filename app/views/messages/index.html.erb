@@ -1,0 +1,8 @@
+<ul>
+  <% @conversations.each do |members, messages| %>
+    <h2> Conversation <%= members[0].email %> / <%= members[1].email %></h2>
+    <% messages.each do |message| %>
+      <%= message.body %>
+    <% end %>
+  <% end %>
+</ul>
